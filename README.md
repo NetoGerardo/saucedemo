@@ -2,7 +2,6 @@
 
 ## Python Version
 3.10.2
-https://www.python.org/downloads/
 
 ## Instalation
 The first thing that you had to do is install the Selenium :
@@ -16,7 +15,7 @@ pip install webdriver_manager
 Now you're ready to go!
 
 ## How to Run
-Opne command prompt and execute the command:
+Open command prompt and execute the command:
 ```bash
 python start.py
 ```
