@@ -2,7 +2,10 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 
-#USED TO SORT PRODUCTS
+#EXCEPTION TREAT
+from selenium.common.exceptions import NoSuchElementException
+
+#USED TO ORDER PRODUCTS
 from selenium.webdriver.support.ui import Select
 
 from selenium.webdriver.common.by import By
@@ -28,19 +31,35 @@ username_field.send_keys(password);
 login_btn = driver.find_element(By.XPATH, '//*[@id="login-button"]');
 login_btn.click();
 
-#SORT BY PRICE (low to high)
+#ORDER BY PRICE (low to high)
 filter_btn = driver.find_element(By.XPATH, '//*[@id="header_container"]/div[2]/div[2]/span/select');
 filter_options = Select(filter_btn);
 filter_options.select_by_visible_text('Price (low to high)')
 
+
+#ADD PRODUCTS ONE BY ONE
+
 #FIND FIRST PRODUCT
-product1 = driver.find_element(By.NAME , 'add-to-cart-sauce-labs-onesie');
-product1.click();
+#product1 = driver.find_element(By.NAME , 'add-to-cart-sauce-labs-onesie');
+#product1.click();
 
 #FIND SECOND PRODUCT
-product1 = driver.find_element(By.NAME , 'add-to-cart-test.allthethings()-t-shirt-(red)');
-product1.click();
+#product1 = driver.find_element(By.NAME , 'add-to-cart-test.allthethings()-t-shirt-(red)');
+#product1.click();
 
-#ONLY TO KEEP COMMAND PROMPT OPEN
+
+#ADD PRODUCTS IN LIST
+products = ['sauce-labs-onesie', 'test.allthethings()-t-shirt-(red)'];
+print(products);
+
+for i in products:
+    name = 'add-to-cart-' + i;
+    print(name);
+    try:
+        element = driver.find_element(By.NAME , name);
+        element.click();
+    except NoSuchElementException as ex:
+        print(ex);
+
 input();
 
