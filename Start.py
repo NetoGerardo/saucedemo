@@ -28,7 +28,7 @@ username_field.send_keys(password);
 login_btn = driver.find_element(By.XPATH, '//*[@id="login-button"]');
 login_btn.click();
 
-#ORDER BY PRICE (low to high)
+#SORT BY PRICE (low to high)
 filter_btn = driver.find_element(By.XPATH, '//*[@id="header_container"]/div[2]/div[2]/span/select');
 filter_options = Select(filter_btn);
 filter_options.select_by_visible_text('Price (low to high)')
