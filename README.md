@@ -1,4 +1,5 @@
 ## saucedemo
+[![python version]3.10.2
 
 # Python Version
 3.10.2
