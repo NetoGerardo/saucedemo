@@ -6,6 +6,10 @@ https://www.python.org/downloads/
 
 # Instalation
 The first thing that you had to do is install the Selenium and WebDriver Manager :
--`pip install selenium`
+```bash
+pip install selenium
+```
+```bash
+pip install webdriver_manager
+```
 
--`pip install webdriver_manager`
