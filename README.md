@@ -1,10 +1,10 @@
-## saucedemo
+# saucedemo
 
-# Python Version
+## Python Version
 3.10.2
 https://www.python.org/downloads/
 
-# Instalation
+## Instalation
 The first thing that you had to do is install the Selenium :
 ```bash
 pip install selenium
@@ -14,4 +14,10 @@ After that install WebDriver Manager :
 pip install webdriver_manager
 ```
 Now you're ready to go!
+
+## How to Run
+Opne command prompt and execute the command:
+```bash
+python start.py
+```
 
