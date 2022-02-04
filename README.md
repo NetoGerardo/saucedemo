@@ -1,5 +1,25 @@
 # saucedemo
 
+## Versão do Python
+3.10.2
+
+## Instalação
+A primeira coisa a se fazer é instalar o Selenium:
+```bash
+pip install selenium
+```
+Em seguida, instalar o WebDriver Manager :
+```bash
+pip install webdriver_manager
+```
+Agora está tudo pronto para executar!
+
+## Como executar
+Abra o prompt de comando e execute:
+```bash
+python start.py
+```
+# English
 ## Python Version
 3.10.2
 
